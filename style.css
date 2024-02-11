@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#perfil{
+    float: left;
+    
+}
+
+
+
+#menu_general{
+    background-color: aqua;
+    width: 100%;
+    clear: both;
+   
+
+}
+#menu_parcial_1{
+
+    width: 100%;
+    background-color: rgb(179, 255, 108);
+
+}
+#menu_parcial_2{
+
+    width: 100%;
+    background-color: rgb(222, 255, 112);
+
+}
+#menu_parcial_3{
+
+    width: 100%;
+    background-color: rgb(255, 212, 95);
+
+}
+#menu_contacto{
+
+    width: 100%;
+    background-color: rgb(244, 61, 58);
+
+}
+
+
+#img_logo{
+
+    width: 120px;
+    height: 100px;
+    padding: 8px;
+    justify-items: left;
+}
+
+#titulo_gen{
+    font-size: xx-large;
+    padding: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: aliceblue;
+
+    border-style: ridge;
+    border-color: blue;
+
+
+}
+
+
+nav{
+    float: right;
+    margin-right: 300px;
+}
+
+nav ul li{
+
+    font-size: 20px;
+    list-style: none;
+    float: left;
+    margin-left: 50px;
+    margin-top: 50px;
+    background-color: aliceblue;
+    padding: 7px;
+    border-style: ridge;
+    border-color: blue;
+    
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+nav ul li a::before{
+    width: 100%;
+    height: 5px;
+    top: 0;
+
+}
+
+.generic_sections{
+    margin: 50px;
+    padding: 10px;
+}
+.generic_sections h2{  
+
+    margin-bottom: 25px;
+
+}
+.generic_paragraphs{
+    margin-top: 20px;
+    font-size: 20px;
+    
+}
+
+#footer_gen{
+    background-color: aqua;
+    
+}
+
+.generic_index{
+
+    font-size: 30px;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+.lindex li{
+
+    margin-top: 50px;
+
+}
+
+.lindex li a{
+    text-decoration: none;
+}
+
+
+.div_li{
+    margin-left: 70px;
+    margin-top: 100px;
+    padding-bottom: 60px;
+}
+.div_li p{
+    font-size: 30px;
+    margin-left: 150px;
+}
