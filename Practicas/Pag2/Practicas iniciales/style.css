@@ -1,0 +1,22 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header{
+    background-color: orange;
+    padding-bottom: 50px;
+
+}
+
+li{
+    list-style: none;
+    float: right;
+    padding-right: 30px;
+    padding-top: 20px;
+    font-size: larger;
+    font-style: oblique;
+}
+
+#titulo{
+    float: left;
+}
