@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(48, 132, 75);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.v1{
+    font-style: italic;
+    color: azure;
+}.v2{
+
+    color: burlywood;
+}
+.v3{
+
+    color: goldenrod;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.v4{
+
+    color:  crimson;
+    backdrop-filter: blur(10px); 
+    /* No me sirve el desenfoque :( */
+}
