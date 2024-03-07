@@ -1,0 +1,26 @@
+body{
+    background-image: url(./fondo2.jfif);
+}
+h1{
+    margin-top: 25%;
+    margin-left: 40%;
+    color: aliceblue;
+}
+
+table{
+    background-color: azure;
+    box-shadow: 10%;
+    margin-left: 25%;
+    
+}
+td{
+    height: 45px;
+    width: 45px;
+    border: 2px solid;
+}
+.blanco{
+    background-color: white;
+}
+.negro{
+    background-color: rgb(0, 0, 0);
+}
