@@ -2,7 +2,7 @@ body{
     background-image: url(./fondo2.jfif);
 }
 h1{
-    margin-top: 25%;
+    margin-top: 10%;
     margin-left: 40%;
     color: aliceblue;
 }
@@ -10,7 +10,7 @@ h1{
 table{
     background-color: azure;
     box-shadow: 10%;
-    margin-left: 25%;
+    margin-left: 33%;
     
 }
 td{
