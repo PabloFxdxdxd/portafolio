@@ -1,0 +1,53 @@
+@import url(https://fonts.googleapis.com/css?family=Caveat|Indie+Flower);
+
+body{
+    background-image: url(./fondo.jfif);
+}
+
+h1{
+    font-size: 40px;
+    margin-left: 40%;
+    color: rgb(165, 56, 42);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h2{
+    margin-left: 42%;
+    color: rgb(167, 96, 96);
+    font-weight: bold;
+}
+.estrofa{
+    border-radius: 0% 10% 0% 0%;
+    background-color: rgb(0, 0, 0);
+    margin-left: 35%;
+    margin-bottom: 10px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: Indie Flower;
+    font-weight: bolder;
+    font-size: 14px;
+    width: 25%;
+
+    border: 1px solid;
+    border-color: rgb(255, 145, 0);
+}
+.estribillo{
+    border-radius: 10% 0% 0% 0%;
+    font-weight: bold;
+    margin-left: 35%;
+    text-align: center;
+    color: rgb(211, 111, 111);
+    background-color: rgb(49, 23, 23);
+    font-size: 14px;
+    width: 25%;
+
+}
+#imagenes{
+
+    margin-left: 30%;
+
+}
+img{
+    
+    height: 100px;
+    
+}
