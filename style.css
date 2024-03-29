@@ -12,7 +12,7 @@
 
 
 #menu_general{
-    background-color: aqua;
+    background-color: rgb(60, 60, 60);
     width: 100%;
     clear: both;
    
@@ -21,25 +21,25 @@
 #menu_parcial_1{
 
     width: 100%;
-    background-color: rgb(179, 255, 108);
+    background-color: rgb(60, 60, 60);
 
 }
 #menu_parcial_2{
 
     width: 100%;
-    background-color: rgb(222, 255, 112);
+    background-color: rgb(60, 60, 60);
 
 }
 #menu_parcial_3{
 
     width: 100%;
-    background-color: rgb(255, 212, 95);
+    background-color: rgb(60, 60, 60);
 
 }
 #menu_contacto{
 
     width: 100%;
-    background-color: rgb(244, 61, 58);
+    background-color: rgb(60, 60, 60);
 
 }
 
