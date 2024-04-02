@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transición de imagen con CSS</title>
+    <style>
+
+        *{
+            margin: 0;
+            box-sizing: 0;
+
+        }
+        a{
+            text-decoration: none;
+            color: azure;
+            
+        
+        }
+        /* Estilos básicos para la imagen */
+        header{
+            
+            background-color: rgb(165, 97, 42);
+            padding-bottom: 70px;
+            
+        }
+        
+        nav ul li{
+            margin-top: 10px;
+            margin-right: 3px;
+            width: 200px; /* Ancho inicial */
+            transition: width 0.5s; /* Transición suave */
+            background-color: brown;
+            color: azure;
+            justify-content: center;
+            align-items: center;
+            float: right;
+            display: flex;
+            position: relative;
+            height: 50px;
+            list-style: none;
+            border-radius: 7% 7% 7% 7%;
+            border: 2px solid rgb(165, 42, 42);
+        }
+
+        /* Cambio de tamaño al hacer hover */
+        li:hover {
+            width: 300px; /* Ancho al hacer hover */
+            background-color: rgb(165, 153, 42);
+            
+        }
+    </style>
+</head>
+
+<header>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="https://www.upslp.edu.mx/upslp/" target="_blank">
+                    <h2>Nosotros</h2>
+                </a>
+                
+
+            </li>
+            <li>
+                <a href="https://www.upslp.edu.mx/upslp/?page_id=244" target="_blank"><h2>Aspirantes</h2></a>
+                
+
+            </li>
+            <li>
+                <a href="https://www.upslp.edu.mx/upslp/?page_id=209" target="_blank"><h2>Estudiantes</h2></a>
+            </li>
+            <li>
+                <a href="https://www.upslp.edu.mx/upslp/?page_id=231" target="_blank"><h2>Docentes</h2></a>
+                
+            </li>
+            <li>
+                <a href="https://www.upslp.edu.mx/upslp/?page_id=241" target="_blank"><h2>Egresados</h2></a>
+                
+            </li>
+            <li>
+                <a href="https://www.upslp.edu.mx/upslp/?page_id=10971" target="_blank"><h2>Contacto</h2></a>
+                
+            </li>
+        </ul>
+    </nav>
+
+</header>
+<body>
+    <!-- Imagen con clase "imagen" -->
+ 
+    
+
+
+</body>
+</html>
