@@ -1,0 +1,101 @@
+@font-face {
+    font-family: monoton;
+    src: url(fonts/monoton.woff2);
+}
+*{
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    color: white;
+    height: auto;
+    width: auto;
+    background-color: black;
+}
+
+.header h1{
+        
+        text-align: center;
+        font-variant: small-caps;
+        font-family: monoton;
+        color: green;
+}
+.header .subheader{
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: xx-large;
+    color: green;
+    text-align: center;
+}
+#logo{
+    background-color: aliceblue;
+    float: left;
+    height: 50px;
+}
+
+
+
+.principal{
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    width: 90%;
+    background-image: url(./img/matrix.png);
+}
+
+.sub{
+
+    background-color: black;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section{
+    margin: 40px;
+    margin-bottom: -20px;
+    border: 2px solid white;
+    text-align: justify;
+}
+section h2{
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 1% 1%;
+    background-color: rgb(36, 218, 60);
+}
+section img{
+    float: right;
+    height: 200px;
+    margin: 10px;
+    border-radius: 3% 3% 3% 3%;
+    border: 3px solid white;
+    outline: 3px solid green;
+}
+p{
+    margin: 10px;
+    
+}
+.titulos{
+    color: gold;
+}
+.creadores{
+    color: crimson;
+}
+.fechas{
+    color: #00ba00;
+}
+
+#footer{
+
+    margin: 40px;
+    width: 90%;
+    font-size: small;
+    
+}
+a{
+    text-decoration: none;
+}
+
+
+
