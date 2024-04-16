@@ -1,0 +1,67 @@
+
+<html>
+
+<head>
+
+  <title>Bienvenida del usuario</title>
+
+  <style>
+    p{
+        color: green;
+    }
+  </style>
+
+  <script type = "text/javascript">
+
+  function alertName() {
+
+    var veces1= parseInt(document.forms[0].veces.value);
+
+    for(i=1;i<=veces1;i++)
+
+    {
+
+      document.write("<p>Este es un párrafo</p>");
+
+    }
+
+    return true;
+
+  }
+
+  function imprimir() {
+    var veces = parseInt(document.forms[1].veces1.value);
+
+    for(i = 0;i<veces;i++){
+        document.write("<p>Vez numero: " + (i + 1)+ "</p>");
+    }
+
+    return true;
+
+  }
+
+  </script>
+
+</head>
+
+<body>
+
+<form id="myform" onsubmit="return alertName();">
+
+<p>Cuantos párrafos <input id="veces" name="veces" type="text" /></p>
+
+<p><input type="submit" /></p>
+
+</form>
+
+<form id="myform1" onsubmit="return imprimir();">
+
+    <p>Cuantas veces quieres imprimir <input id="veces1" name="veces1" type="text" /></p>
+    
+    <p><input type="submit" /></p>
+    
+</form>
+
+</body>
+
+</html>

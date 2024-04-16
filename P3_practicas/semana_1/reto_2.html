@@ -1,0 +1,71 @@
+<html>
+
+<head>
+
+  <title>Grados</title>
+
+  <style>
+    p{
+        color: rgb(13, 0, 128);
+    }
+    div{
+      background-color: aqua;
+      width: 25%;
+      padding: 30px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20%;
+    }
+
+    form{
+      background-color: aquamarine;
+      padding: 15px;
+    }
+  </style>
+
+  <script type = "text/javascript">
+
+  function convertidor() {
+
+    var grados_c= parseInt(document.forms[0].gradosC.value);
+    var quiere = document.forms[0].selecto.value;
+    var valorf = 0;
+
+    if(quiere == "farenheit"){
+      valorf = grados_c * 1.8 + 32;
+    }else{
+      valorf = grados_c + 273.15;
+    }
+
+    document.write(" Tu resultado es: ",valorf, " grados ", quiere);
+
+    return true;
+
+  }
+
+
+  </script>
+
+</head>
+
+<body>
+
+<div>
+  <form id="myform1" onsubmit="return convertidor();">
+
+    <p>Grados Centígrados: <input id="gradosC" name="gradosC" type="text" /></p>
+
+    <select name="selecto" id="selecto">
+      <option value="farenheit">Farenheit</option>
+      <option value="kelvin">Kelvin</option>
+    </select>
+    
+    <p><input type="submit" /></p>
+</div>
+
+    
+</form>
+
+</body>
+
+</html>

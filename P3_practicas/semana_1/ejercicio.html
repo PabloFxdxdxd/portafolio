@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function validacion() {
+            var usuario = document.forms[0].user.value;
+            var contra = document.forms[0].pass.value;
+
+            if(usuario == "Pablo" && contra == "1234"){
+                document.write("<a href='./tabla_a.html'>Link</a>");
+            }else{
+                document.write("Acceso Denegado");
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+    <h1>Inicio de sesión</h1>
+    <form id="myform" onsubmit="return validacion();">
+
+        <p>Usuario<input id="user" name="user" type="text" /></p>
+        <p>Contraseña <input id="pass" name="pass" type="password" /></p>
+    
+    <p><input type="submit" /></p>
+
+    </form>
+    
+</body>
+</html>

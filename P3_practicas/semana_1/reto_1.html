@@ -1,0 +1,60 @@
+<html>
+
+<head>
+
+  <title>Bienvenida del usuario</title>
+
+  <style>
+    p{
+        color: green;
+    }
+  </style>
+
+  <script type = "text/javascript">
+
+  function tabla() {
+
+    var filas= parseInt(document.forms[0].filas.value);
+    var columnas= parseInt(document.forms[0].columnas.value);
+    var rand = 0;
+
+    document.write("<table border=1>");
+
+    for(i=0;i < filas;i++){
+
+        document.write("<tr style='font-weight: bolder;'>");
+        for(j=0;j < columnas;j++){
+
+            rand = Math.floor(Math.random() * 100) + 1;
+            document.write("<td style='background-color: #000000; color:#ffffff;'>"+ rand +"</td>");
+
+        }
+        document.write("</tr>");
+      
+
+    }
+    document.write("</table>");
+    return true;
+
+  }
+
+
+  </script>
+
+</head>
+
+<body>
+
+
+<form id="myform1" onsubmit="return tabla();">
+
+    <p>Cuantas filas quieres imprimir <input id="filas" name="filas" type="text" /></p>
+    <p>Cuantas columnas quieres imprimir <input id="columnas" name="columnas" type="text" /></p>
+    
+    <p><input type="submit" /></p>
+    
+</form>
+
+</body>
+
+</html>
