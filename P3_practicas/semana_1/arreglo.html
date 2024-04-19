@@ -24,6 +24,16 @@
             background-color: azure;
             padding: 10px;
         }
+        button{
+            margin: 4px;
+        }
+        table td{
+            background-color: rgb(148, 195, 197);
+        }
+
+        td:hover{
+            background-color: rgb(194, 99, 99);
+        }
     </style>
 </head>
 
@@ -39,13 +49,19 @@
 
             <p>Click en la opcion</p>
 
-            <button onclick="generaarreglo()">Llenado arreglo</button>
+            <button onclick="generaarreglo()">Llenado Arreglo</button>
 
-            <button onclick="imprimearreglo()">Imprime arreglo</button>
+            <button onclick="imprimearreglo()">Imprime Arreglo</button>
 
             <button onclick="ordenar()">Ordenar Arreglo</button>
 
             <button onclick="reversa()">Ordenar Arreglo al Revés</button>
+
+            <button onclick="imprimirtabla()">Imprimir Tabla</button>
+
+            <button onclick="agregar()">Agregar Valor</button>
+
+            <button onclick="eliminar()">Eliminar Valor</button>
 
             <p id="demo"></p>
 
@@ -57,12 +73,12 @@
         <script>
         
         var arreglo = [0, 0, 0, 0, 0,0];
-
+        
         function generaarreglo() {
 
             
-
-            for(i = 0;i< 6; i++){
+            var n = arreglo.length;
+            for(i = 0;i< n; i++){
                 
                 arreglo[i] = Math.floor(Math.random() * 100) + 1;
 
@@ -91,19 +107,38 @@
             
         }
 
-        function ordenafor(){
-            for(i = 0;i< 6; i++){
-                for(j = 0; j<6;j++){
+        function imprimirtabla(){
 
-                    if(arreglo[i] < arreglo[j]){
-                        aux = arreglo[i];
-                        arreglo[i] = arreglo[j];
-                        arreglo[j] = aux;
+            var n = arreglo.length;
 
-                    }
+            var texto = "<table border 1px;>";
+            
+                texto = texto + "<tr>";
+            for(i=0;i < n;i++){
 
-                }
+                    texto = texto + "<td>"+arreglo[i]+"</td>";
+
             }
+            texto = texto + "</tr>";
+            
+                texto = texto + "</table>";
+
+                document.getElementById("demo").innerHTML = texto;
+
+
+
+        }
+
+        function agregar(){
+
+            rand = Math.floor(Math.random() * 100) + 1;
+            arreglo + arreglo.push(rand);
+
+        }
+        function eliminar(){
+
+            arreglo - arreglo.pop();
+
         }
 
         </script>
