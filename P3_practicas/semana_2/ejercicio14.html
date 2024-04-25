@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<body>
+
+
+
+<div id="myPlot" style="width:100%;max-width:700px"></div>
+<div id="myPlot2" style="width:100%;max-width:700px"></div>
+<div id="myPlot3" style="width:100%;max-width:700px"></div>
+
+
+
+<script>
+
+const xArray = ["Programación I", "Programación Web", "Núcleo II", "Inglés V", "Física I", "Matemáticas I"];
+
+const yArray = [9.5, 9.5, 9.5, 9, 7, 8];
+const calif2 = [9.0, 10.0, 8.5, 9, 10, 9];
+const calif3 = [randomcal(), randomcal(), randomcal(), randomcal(), randomcal(), randomcal()];
+
+
+
+const data = [{
+
+ x:xArray,
+
+ y:yArray,
+
+ type:"bar",
+
+ orientation:"v",
+
+ marker: {color:"rgba(0,0,255,0.6)"}
+
+}];
+const datos = [{
+
+x:xArray,
+
+y:calif2,
+
+type:"bar",
+
+orientation:"v",
+
+marker: {color:"rgba(0,255,0,0.6)"}
+
+}];
+const datos2 = [{
+
+x:xArray,
+
+y:calif3,
+
+type:"bar",
+
+orientation:"v",
+
+marker: {color:"rgba(255,0,0,0.6)"}
+
+}];
+
+
+
+const layout = {title:"Calificaciones Parcial I"};
+const layout2= {title:"Calificaciones Parcial II"};
+const layout3= {title:"Proyección Parcial III"};
+
+
+
+Plotly.newPlot("myPlot", data, layout);
+Plotly.newPlot("myPlot2", datos, layout2);
+Plotly.newPlot("myPlot3", datos2, layout3);
+
+function randomcal(){
+    
+    n = Math.floor(Math.random() * 3) + 8;
+    return n;
+
+}
+
+</script>
+
+
+
+</body>
+
+</html>
