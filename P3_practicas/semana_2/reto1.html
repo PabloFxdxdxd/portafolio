@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+    <title>Reto 1</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>
+
+        function grafica(){
+        
+            var xingresado= parseInt(document.forms[0].inicio.value);
+            var y= parseInt(document.forms[0].fin.value);
+        
+            if(xingresado > y || xingresado == y)
+            {
+                alert("Tus datos son inadecuados");
+            }else{
+        
+                let exp = "Math.sin(x);";
+        
+            
+                // Generate values
+        
+                const xValues = [];
+        
+                const yValues = [];
+        
+                for ( let x = xingresado; x <= y; x += .1) {
+        
+                xValues.push(x);
+        
+                yValues.push(eval(exp));
+        
+                }
+        
+        
+        
+                // Display using Plotly
+        
+                const data = [{x:xValues, y:yValues, mode:"lines"}];
+        
+                const layout = {title: "y = " + exp};
+        
+                Plotly.newPlot("myPlot", data, layout);
+                return false;
+                }
+        
+            }
+        
+        </script>
+</head>
+
+
+
+<body>
+
+    <div id="myPlot" style="width:100%;max-width:700px"></div>
+    
+    <form id="myform1" onsubmit="return grafica();">
+
+        <p>Inicio de la gráfica: <input id="inicio" name="inicio" type="text" /></p>
+        <p>Fin de la gráfica: <input id="fin" name="fin" type="text" /></p>
+        
+        <p><input type="submit" /></p>
+        
+    </form>
+
+
+</body>
+
+</html>
