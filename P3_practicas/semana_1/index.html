@@ -9,10 +9,14 @@
         body{
             background-color: rgb(54, 54, 133);
             text-align: center;
+            flex-direction: column;
+            
+            
         }
 
         h1{
             text-align: center;
+            
         }
         h2{
             text-align: center;
@@ -29,6 +33,9 @@
             background-color: aquamarine;
             padding: 30px;
             margin-top: 100px;
+            
+            
+            
         }
 
         #h2{
@@ -67,19 +74,46 @@
 
             <h3>Click en la opcion</h3>
 
-            <button onclick="liga(1)">Liga 1</button>
-            <button onclick="liga(2)">Liga 2</button>
-            <button onclick="liga(3)">Liga 3</button>
-            <button onclick="liga(4)">Liga 4</button>
-            <button onclick="liga(5)">Liga 5</button>
-            <button onclick="liga(6)">Liga 6</button>
-            <button onclick="liga(7)">Liga 7</button>
-            <button onclick="liga(8)">Liga 8</button>
-            <button onclick="liga(9)">Liga 9</button>
+            <button onclick="liga1(1)">Liga 1</button>
+            <button onclick="liga1(2)">Liga 2</button>
+            <button onclick="liga1(3)">Liga 3</button>
+            <button onclick="liga1(4)">Liga 4</button>
+            <button onclick="liga1(5)">Liga 5</button>
+            <button onclick="liga1(6)">Liga 6</button>
+            <button onclick="liga1(7)">Liga 7</button>
+            <button onclick="liga1(8)">Liga 8</button>
+            <button onclick="liga1(9)">Liga 9</button>
 
             
 
             <p id="demo"></p>
+
+        </div>
+
+    </div>
+
+    <div id="h1" style="background-color: rgb(32, 136, 32);">
+
+        <div id="h2">
+
+            <h1>Ejercicios</h1>
+
+            <h2>Semana 2</h2>
+
+            <h3>Click en la opcion</h3>
+
+            <button onclick="liga2(1)">Liga 1</button>
+            <button onclick="liga2(2)">Liga 2</button>
+            <button onclick="liga2(3)">Liga 3</button>
+            <button onclick="liga2(4)">Liga 4</button>
+            <button onclick="liga2(5)">Liga 5</button>
+            <button onclick="liga2(6)">Liga 6</button>
+            <button onclick="liga2(7)">Liga 7</button>
+            <button onclick="liga2(8)">Liga 8</button>
+            <button onclick="liga2(9)">Liga 9</button>
+            
+
+            <p id="demo2"></p>
 
         </div>
 
@@ -90,42 +124,75 @@
         
        
         
-        function liga(opc){
+        function liga2(opc){
 
             switch(opc){
 
                 case 1:
-                    document.getElementById("demo").innerHTML = "<a href='' target='_blank'>Liga "+opc+"</a>";
+                    document.getElementById("demo2").innerHTML = "<a href='./../semana_2/ejercicio11.html' target='_blank'>Ejercicio 11 </a>";
                     break;
                 case 2:
-                    document.getElementById("demo").innerHTML = "<a href='./prueba.html' target='_blank'>Liga "+opc+"</a>";
+                    document.getElementById("demo2").innerHTML = "<a href='./../semana_2/ejercicio12.html' target='_blank'>Ejercicio 12 </a>";
                     break;
                 case 3:
-                    document.getElementById("demo").innerHTML = "<a href='./tabla.html' target='_blank'>Liga "+opc+"</a>";
+                    document.getElementById("demo2").innerHTML = "<a href='./../semana_2/ejercicio13.html' target='_blank'>Ejercicio 13 </a>";
                     break;
                 case 4:
-                    document.getElementById("demo").innerHTML = "<a href='./tabla_b.html' target='_blank'>Liga "+opc+"</a>";
+                    document.getElementById("demo2").innerHTML = "<a href='./../semana_2/ejercicio14.html' target='_blank'>Ejercicio 14 </a>";
                     break;
                 case 5:
-                    document.getElementById("demo").innerHTML = "<a href='./tabla_a.html' target='_blank'>Liga "+opc+"</a>";
+                    document.getElementById("demo2").innerHTML = "<a href='./../semana_2/ejercicio15.html' target='_blank'>Ejercicio 15 </a>";
                     break;
                 case 6:
-                    document.getElementById("demo").innerHTML = "<a href='./reto_1.html' target='_blank'>Liga "+opc+"</a>";
+                    document.getElementById("demo2").innerHTML = "<a href='./../semana_2/ejercicio16.html' target='_blank'>Ejercicio 16 </a>";
                     break;
                 case 7:
-                    document.getElementById("demo").innerHTML = "<a href='./ejercicio.html' target='_blank'>Liga "+opc+"</a>";
+                    document.getElementById("demo2").innerHTML = "<a href='./../semana_2/ejercicio17.html' target='_blank'>Ejercicio 17 </a>";
                     break;
                 case 8:
-                    document.getElementById("demo").innerHTML = "<a href='./reto_2.html' target='_blank'>Liga "+opc+"</a>";
+                    document.getElementById("demo2").innerHTML = "<a href='./../semana_2/reto1.html' target='_blank'>Reto 1 </a>";
                     break;
                 case 9:
-                    document.getElementById("demo").innerHTML = "<a href='./arreglo.html' target='_blank'>Liga "+opc+"</a>";
+                    document.getElementById("demo2").innerHTML = "<a href='./../semana_2/reto2.html' target='_blank'>Reto 2 </a>";
                     break;
 
             }
-            
-
         }
+
+        function liga1(opc){
+
+switch(opc){
+
+    case 1:
+        document.getElementById("demo").innerHTML = "<a href='' target='_blank'>Liga "+opc+"</a>";
+        break;
+    case 2:
+        document.getElementById("demo").innerHTML = "<a href='./prueba.html' target='_blank'>Liga "+opc+"</a>";
+        break;
+    case 3:
+        document.getElementById("demo").innerHTML = "<a href='./tabla.html' target='_blank'>Liga "+opc+"</a>";
+        break;
+    case 4:
+        document.getElementById("demo").innerHTML = "<a href='./tabla_b.html' target='_blank'>Liga "+opc+"</a>";
+        break;
+    case 5:
+        document.getElementById("demo").innerHTML = "<a href='./tabla_a.html' target='_blank'>Liga "+opc+"</a>";
+        break;
+    case 6:
+        document.getElementById("demo").innerHTML = "<a href='./reto_1.html' target='_blank'>Liga "+opc+"</a>";
+        break;
+    case 7:
+        document.getElementById("demo").innerHTML = "<a href='./ejercicio.html' target='_blank'>Liga "+opc+"</a>";
+        break;
+    case 8:
+        document.getElementById("demo").innerHTML = "<a href='./reto_2.html' target='_blank'>Liga "+opc+"</a>";
+        break;
+    case 9:
+        document.getElementById("demo").innerHTML = "<a href='./arreglo.html' target='_blank'>Liga "+opc+"</a>";
+        break;
+
+}
+}
 
         </script>
 </body>
