@@ -10,10 +10,23 @@
 const c = document.getElementById("myCanvas");
 const ctx = c.getContext("2d");
 ctx.beginPath();
+/*Cabeza*/
 ctx.arc(360,70,50,0,(Math.PI/180)*360,true);
+/*Cuerpo*/
 ctx.moveTo(360, 120);
 ctx.lineTo(360, 250);
 ctx.strokeStyle = "#f00";
+/*Pierna 1*/
+ctx.lineTo(420, 380);
+/*Pierna2*/
+ctx.moveTo(360, 250);
+ctx.lineTo(290, 380);
+/*Brazo*/
+ctx.moveTo(360, 175);
+ctx.lineTo(290, 210);
+/*Brazo2*/
+ctx.moveTo(360, 175);
+ctx.lineTo(420, 210);
 ctx.lineWidth = 4;
 ctx.stroke();
 /*
