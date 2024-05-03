@@ -1,34 +1,89 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>HTML5 Canvas</h1>
+<h1>Ahorcado Parte 1</h1>
 <h2>The stroke() Method</h2>
 
-<canvas id="myCanvas" width="1000px" height="1000px" style="border:1px solid grey"></canvas>
+<form action="" onsubmit="return dibujar()">
+    <p> Palabra: <input id="palabra" name="palabra" type="text"></p>
+    <p><input type="submit" value="Responder" name="responder"></p>
+</form>
+
+
+<p><button type="" onclick="return borrar()">Borrar</button></p>
+
+<canvas id="myCanvas" width="500px" height="500px" style="border:1px solid grey"></canvas>
 
 <script>
-const c = document.getElementById("myCanvas");
-const ctx = c.getContext("2d");
-ctx.beginPath();
-/*Cabeza*/
-ctx.arc(360,70,50,0,(Math.PI/180)*360,true);
-/*Cuerpo*/
-ctx.moveTo(360, 120);
-ctx.lineTo(360, 250);
-ctx.strokeStyle = "#f00";
-/*Pierna 1*/
-ctx.lineTo(420, 380);
-/*Pierna2*/
-ctx.moveTo(360, 250);
-ctx.lineTo(290, 380);
-/*Brazo*/
-ctx.moveTo(360, 175);
-ctx.lineTo(290, 210);
-/*Brazo2*/
-ctx.moveTo(360, 175);
-ctx.lineTo(420, 210);
-ctx.lineWidth = 4;
-ctx.stroke();
+
+    var cont = 0;
+
+    function dibujar(){
+
+        const c = document.getElementById("myCanvas");
+        const ctx = c.getContext("2d");
+        ctx.beginPath();
+        var intento = document.forms[0].palabra.value;
+        var palabra = "gatito";
+        cont++;
+
+        if(intento != palabra){
+        
+        
+        switch(cont){
+            case 1: 
+            /*Cabeza*/
+            ctx.arc(360,70,50,0,(Math.PI/180)*360,true);
+            break;
+            case 2:
+            /*Cuerpo*/
+            ctx.moveTo(360, 120);
+            ctx.lineTo(360, 250);
+            break;
+            case 3:
+                /*Brazo*/
+                ctx.moveTo(360, 175);
+                ctx.lineTo(290, 210);
+                break;
+            case 4:
+                /*Brazo2*/
+                ctx.moveTo(360, 175);
+                ctx.lineTo(420, 210);
+                break;
+            case 5:
+                /*Pierna 1*/
+                ctx.moveTo(360, 250);
+                ctx.lineTo(420, 380);
+                break;
+            case 6:
+                /*Pierna2*/
+                ctx.moveTo(360, 250);
+                ctx.lineTo(290, 380);
+                alert("Perdiste");
+                break;
+
+
+        }
+        ctx.strokeStyle = "#f00";
+        ctx.lineWidth = 4;
+        ctx.stroke();
+    }
+    else{
+        alert("Ganaste!");
+        borrar();
+    }
+        
+        return false;
+
+    }
+    function borrar(){
+        const c = document.getElementById("myCanvas");
+        const ctx = c.getContext("2d");
+        ctx.fillStyle = "white";
+        ctx.fillRect(0, 0, 500, 500);
+        cont = 0;
+    }
+
 /*
 ctx.lineTo(20, 100);
 ctx.lineTo(70, 100);
