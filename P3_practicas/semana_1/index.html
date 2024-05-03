@@ -90,7 +90,7 @@
 
         </div>
 
-    </div>
+    </div> 
 
     <div id="h1" style="background-color: rgb(32, 136, 32);">
 
@@ -118,10 +118,44 @@
         </div>
 
     </div>
+
+    <div id="h1" style="background-color: rgb(229, 255, 0);">
+
+        <div id="h2">
+
+            <h1>Ejercicios</h1>
+
+            <h2>Semana 3</h2>
+
+            <h3>Click en la opcion</h3>
+
+            <button onclick="liga3(1)">Liga 1</button>
+            <button onclick="liga3(2)">Liga 2</button>
+            
+
+            <p id="demo3"></p>
+
+        </div>
+
+    </div>
         
 
         <script>
         
+        function liga3(opc){
+
+    switch(opc){
+
+    case 1:
+        document.getElementById("demo3").innerHTML = "<a href='./../semana_2/ejercicio17.html' target='_blank'>Ahorcado </a>";
+        break;
+    case 2:
+        document.getElementById("demo3").innerHTML = "<a href='./../semana_3/testalumno.html' target='_blank'>Test </a>";
+        break;
+
+
+}
+}
        
         
         function liga2(opc){
