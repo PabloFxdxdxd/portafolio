@@ -138,9 +138,48 @@
         </div>
 
     </div>
+
+    <div id="h1" style="background-color: rgb(178, 17, 2);">
+
+        <div id="h2">
+
+            <h1>Ejercicios</h1>
+
+            <h2>Semana 4</h2>
+
+            <h3>Click en la opcion</h3>
+
+            <button onclick="liga4(1)">Liga 1</button>
+            <button onclick="liga4(2)">Liga 2</button>
+            <button onclick="liga4(3)">Liga 3</button>
+            
+
+            <p id="demo4"></p>
+
+        </div>
+
+    </div>
         
 
         <script>
+
+        function liga4(opc){
+
+        switch(opc){
+
+        case 1:
+            document.getElementById("demo4").innerHTML = "<a href='./../semana_4/testalumno.html' target='_blank'>Test</a>";
+            break;
+        case 2:
+            document.getElementById("demo4").innerHTML = "<a href='./../semana_4/pdf2/ejerciciopdf2.html' target='_blank'>Piramide v2 </a>";
+            break;
+        case 3: 
+            document.getElementById("demo4").innerHTML = "<a href='./../semana_4/pdf3/ejerciciopdf2.html' target='_blank'>Piramide v1 </a>";
+            break;
+
+
+        }
+        }
         
         function liga3(opc){
 
@@ -198,7 +237,7 @@
 switch(opc){
 
     case 1:
-        document.getElementById("demo").innerHTML = "<a href='' target='_blank'>Actividad no hecha.</a>";
+        document.getElementById("demo").innerHTML = "<a href='' target='_blank'>Liga "+opc+"</a>";
         break;
     case 2:
         document.getElementById("demo").innerHTML = "<a href='./prueba.html' target='_blank'>Liga "+opc+"</a>";
