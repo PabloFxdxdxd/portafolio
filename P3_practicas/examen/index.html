@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exámen Práctico</title>
+
+    <script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="jspdf.js"></script>
+
+	<script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+
+	<script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
+
+    <style>
+
+        /*
+
+            Paleta de colores general
+
+            rgb(77, 134, 156) Oscuros
+            rgb(122, 178, 178)
+            rgb(205, 232, 229)
+            rgb(238, 247, 255) Claros
+        */
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(238, 247, 255);
+        }
+        nav{
+
+            background-color: rgb(77, 134, 156);
+
+        }
+
+        #logo{
+            width: 100px;
+            margin: 10px;
+            background-color: rgb(205, 232, 229);
+            border-radius: 5%;
+            padding: 5px;
+        }
+        div{
+            margin: 5%;
+            margin-right: auto;
+            margin-left: auto;
+            width: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+
+        <img src="./media/logo.png" alt="" id="logo">
+
+    </nav>
+
+    
+
+    <div>
+        <img src="./media/tabla de conversiones.png" alt="">     
+    </div>
+
+    <div>
+        <form action="">
+            <p>¿Con cuántos carácteres cuenta tu palabra? <input type="number" min="0" max="10" name="ncara" id="ncara"></p>
+            <br>
+            <input type="button" value="Enviar" onclick="caracteres()">
+            <br>
+            <br>
+            
+
+            <p id="carac">
+
+                
+
+            </p>
+
+        </form>
+
+    </div>
+
+    <div id="pdf">
+        <iframe frameborder="0" width="100%" height="400"></iframe>
+    </div>
+    <script> 
+
+    
+
+        function caracteres(){
+            
+            var ncara = document.forms[0].ncara.value;
+
+            if (ncara < 27){
+                var aux = "";
+            
+                for(var i = 1; i<=ncara;i++){
+
+                    aux = aux + "<input type='number' min='0' max='25' style='float: left;' id='p"+i+"' name='p"+i+"'>";
+
+                }
+                    aux = aux + "<br><br><br> <input type='button' value='Traducir' onclick='traducir()'>"
+
+                document.getElementById("carac").innerHTML = aux;
+
+            }else{
+                alert("Demasiados caracteres, por favor vuelve a intentarlo.");
+            }
+
+            
+            
+            
+        }
+        function traducir(){
+            
+            
+            var ncara = document.forms[0].ncara.value;
+            let bien = true;
+            let a = 0;
+            let texto = "";
+            let aux = "";
+            
+            for(var i = 1; i<=ncara;i++){
+
+                aux = "p"+i;
+                a = document.forms[0][aux].value;
+
+                if(a > 25 || a < 0){
+                    alert("Ingresaste un número fuera del rango indicado, vuelve a intentarlo.");
+                    bien = false;
+                    break;
+                }
+                b = parseInt(a);
+
+                switch(b) {
+
+                    case 0:
+                        texto += "A";
+                        break;
+                    case 1:
+                        texto += "B";
+                        break;
+                    case 2:
+                        texto += "C";
+                        break;
+                    case 3:
+                        texto += "D";
+                        break;
+                    case 4:
+                        texto += "E";
+                        break;
+                    case 5:
+                        texto += "F";
+                        break;
+                    case 6:
+                        texto += "G";
+                        break;
+                    case 7:
+                        texto += "H";
+                        break;
+                    case 8:
+                        texto += "I";
+                        break;
+                    case 9:
+                        texto += "J";
+                        break;
+                    case 10:
+                        texto += "K";
+                        break;
+                    case 11:
+                        texto += "L";
+                        break;
+                    case 12:
+                        texto += "M";
+                        break;
+                    case 13:
+                        texto += "N";
+                        break;
+                    case 14:
+                        texto += "O";
+                        break;
+                    case 15:
+                        texto += "P";
+                        break;
+                    case 16:
+                        texto += "Q";
+                        break;
+                    case 17:
+                        texto += "R";
+                        break;
+                    case 18:
+                        texto += "S";
+                        break;
+                    case 19:
+                        texto += "T";
+                        break;
+                    case 20:
+                        texto += "U";
+                        break;
+                    case 21:
+                        texto += "V";
+                        break;
+                    case 22:
+                        texto += "W";
+                        break;
+                    case 23:
+                        texto += "X";
+                        break;
+                    case 24:
+                        texto += "Y";
+                        break;
+                    case 25:
+                        texto += "Z";
+                        break;
+                    
+                }
+                
+            }
+           
+            if(bien == true){
+                var doc = new jsPDF();
+
+                doc.setFontSize(20);
+                doc.text(40, 20, texto);
+
+
+                var string = doc.output('datauristring');
+
+                $('iframe').attr('src', string);
+            }
+            
+            
+
+        }
+
+
+    </script>
+
+
+
+    
+</body>
+</html>
